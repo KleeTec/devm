@@ -1,0 +1,5 @@
+<warn>The following code will be executed:
+<warn>$packURL
+<info>Please be sure that this is no malicious software!	Devm will not check any of it.
+<info>The only restrictions come from the Deno runtime and are mainly about the local directories the code as access to.
+<warn>Are you sure you want to proceed?

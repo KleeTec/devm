@@ -1,0 +1,5 @@
+<warn>The following package will be marked as deleted from your system:
+<warn>$packURL
+<info>Although you won't be able to use the package any more, you need to use "devm purge" to fully delete everything from your system.
+<info>Devm will run that command automatically one month after it was marked as deleted.
+<warn>Are you sure you want to proceed?
