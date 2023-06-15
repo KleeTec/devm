@@ -8,28 +8,50 @@ hierarchy of directories, so you can easily find all the files that belong to th
 
 ## Usage
 
+### package management
+
 ```sh
-devm search <name> # searches through the default repository to find a package called similar to <name>
-devm --install <package> # installs a package from default repository
-devm --remove <package> # removes a package from the system
-devm list # lists all installed packages
-devm history # show history of steps did
-devm --rollback <version?> # go back in history either one step or to <version>
-devm build <mode> # installs all dependencies listed in dependencies.txt and builds the project based on the configuration made in <mode>.ts file
+# searches through the default repository to find a package called similar to <name>
+devm search <name>
+# installs a package from default repository
+devm install <package>
+# removes a package from the system 
+devm remove <package>
+# lists all installed packages
+devm list
+# show history of package option steps did
+devm history
+# go back in history either one step or to <version>
+devm rollback [version]
 ```
 
-More on these commands you can read on:
+### build system
 
-- [search](./docs/search.md)
-- [install](./docs/install.md)
-- [remove](./docs/remove.md)
-- [list](./docs/list.md)
-- [history](./docs/history.md)
-- [rollback](./docs/rollback.md)
-- [build](./docs/build.md)
+```sh
+# initializes a (new) project and creates all files needed
+devm init <project_type?>
+# installs all dependencies listed in .dependencies.txt and builds the project based on the configuration made in <mode>.ts file
+devm build <mode>
+```
 
 ## Installation Setup
 
 1. Download either `unix.bash` for Linux (no idea if Mac is supported) or `windows.bat` for Windows and run it in the directory where you want devm to
    be installed.
-2. Add exactly this path to your PATH environment variable. If you don't know how to do that, you should.
+2. Add exactly this path to your PATH environment variable. If you don't know how to do that, you are screwed anyway.
+
+## Package specification
+
+Every package consists of the following directory hierarchy:
+
+```txt
+package_name
+├── bin
+├── include
+├── lib
+├── src
+├── usr
+└── var
+```
+
+More on those directories in the [directories specification](./docs/package_management/specification/directories.md).
