@@ -18,10 +18,10 @@ Shared and dynamically compiled libraries needed by the binary or to develop wit
 Source code of the program.\
 (not present in minimal mode)
 
-## usr
+## rod
 
 Read-only data.
 
-## var
+## work
 
-Variable data like configurations, game stats and saves.
+Variable data like configurations, game stats and saves. Also the working directory from where the binary will be executed.

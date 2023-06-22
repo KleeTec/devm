@@ -29,7 +29,7 @@ devm rollback [version]
 
 ```sh
 # initializes a (new) project and creates all files needed
-devm init <project_type?>
+devm init <template?>
 # installs all dependencies listed in .dependencies.txt and builds the project based on the configuration made in <mode>.ts file
 devm build <mode>
 ```
